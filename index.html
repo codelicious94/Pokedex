@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/pokeball.png" type="image/x-icon">
+    <script src="pokemonCard.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img class="pokeball" src="./img/pokeball.png" alt="Pokeball">
+            </div>
+            <div>
+                <img class="pokemon-title" src="./img/Pokemon.png" alt="Pokemon">
+            </div>
+            <div class="search-bar">
+                <img class="search-icon" src="./img/search-icon.png" alt="Search">
+                <input oninput="startSearch()" type="text" placeholder="Suche dein Pokemon..." id="search-pokemon">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="pokemon-list">
+            <div class="pokemon-list-wrapper"></div>
+            <div id="pokemon-card" class="pokemon-card"></div>
+        </div>
+        <div class="pokemon-not-found d-none">Pokemon wurde nicht gefunden</div>
+        <div class="button-container">
+            <button onclick="loadMorePokemons()" id="load-more-button">Klicke hier um mehr Pokemon zu sehen!</button>
+        </div>
+    </main>
+  </body>
+</html>
