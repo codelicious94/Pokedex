@@ -70,7 +70,10 @@ function displayPokemons(pokemonList) {
 
     listItem.innerHTML = showPokemons(pokemon, pokemon.pokemonID, pokemon.pokemonForm);
     
-    listItem.onclick = () => openPokemon(pokemon.pokemonID);
+    listItem.onclick = () => {
+      openPokemon(pokemon.pokemonID);
+      document.getElementById('pokemon-card').style.position = 'fixed';
+  };
 
     listWrapper.appendChild(listItem);
   });
@@ -219,7 +222,7 @@ function generateCardHTML(pokemon, types, pokemonID, data, abilities, statsHTML)
         <a href="#" class="tab" onclick="showTab('stats')">Stats</a>
         <a href="#" class="tab" onclick="showTab('evo-chain', ${pokemonID})">Evo Chain</a>
       </div>
-      <div id="main" class="tab-content">
+      <div id="main" class="tab-content active">
         <p><strong>Height:</strong> ${data.height / 10} m</p>
         <p><strong>Weight:</strong> ${data.weight / 10} kg</p>
         <p><strong>Base Experience:</strong> ${data.base_experience}</p>

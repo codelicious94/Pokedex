@@ -93,7 +93,6 @@ header {
 }
 
 .pokemon-card {
-  position: fixed;
   width: 50%;
   height: 100vh;
   top: 50%;
