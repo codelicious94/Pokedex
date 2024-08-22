@@ -32,17 +32,13 @@ let renderedPokemons = [];
 let currentPokemonIndex = 0;
 
 async function loadAndShowPkm() {
-  // Zeige den Lade-Spinner an
   showLoadingSpinner();
   
-  // Lade die Pokémon-Daten
   await getAllPokemonData();
   
-  // Verberge den Lade-Spinner, nachdem die Daten geladen wurden
   hideLoadingSpinner();
 }
 
-// Funktion zum Anzeigen des Lade-Spinners
 function showLoadingSpinner() {
   const spinner = document.createElement('div');
   spinner.className = 'loading-spinner';
@@ -54,14 +50,12 @@ function showLoadingSpinner() {
   document.body.appendChild(spinner);
 }
 
-// Funktion zum Verbergen des Lade-Spinners
 function hideLoadingSpinner() {
   const spinner = document.querySelector('.loading-spinner');
   if (spinner) {
     spinner.remove();
   }
 }
-
 
 async function getAllPokemonData() {
   try {
